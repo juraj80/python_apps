@@ -7,7 +7,7 @@ def print_header():
     print('------------------------------------------')
 
 def search_event_loop():
-    search = 'ONCE_THROUGH_LOOP'
+    search = 'SEARCH_EVENT_LOOP'
 
     while search != 'x':
         try: # try to process code in block, if something goes wrong, raise exception
