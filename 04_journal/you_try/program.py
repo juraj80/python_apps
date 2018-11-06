@@ -15,7 +15,7 @@ def run_event_loop():
 
     print('What do you want to do with your journal?')
     journal_name = 'default'
-    journal_data = journal.load(journal_name)
+    journal_data = journal.load(journal_name) # if new journal, returns empty list
 
 
     cmd = 'EMPTY'
