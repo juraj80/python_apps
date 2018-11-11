@@ -29,7 +29,7 @@ def print_the_header():
 def get_html_from_web(zipcode):
     url = 'http://www.wunderground.com/weather-forecast/{}'.format(zipcode)
 #    print(url)
-    response = requests.get(url)
+    response = requests.get(url) # get a Response object
 #    print(response.status_code)
 #    print(response.text[0:250])
     return response.text

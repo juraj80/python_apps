@@ -41,16 +41,16 @@ def print_the_header():
 
 def get_html_from_web(zipcode):
     url = 'http://www.wunderground.com/weather-forecast/{}'.format(zipcode)
-    response = requests.get(url)
+    response = requests.get(url) # get a Response object
     # print(response.status_code)
     # print(response.text[0:250])
 
-    return response.text
+    return response.text # get a Response content
 
 
 def get_weather_from_html(html):
-    # cityCss = '.region-content-header h1'
-    # weatherScaleCss = '.wu-unit-temperature .wu-label'
+    # cityCss = '.region-content-header h1'               # $(.region-content-header) .-class
+    # weatherScaleCss = '.wu-unit-temperature .wu-label'  # $(#location h1) #-div id , h1-heading
     # weatherTempCss = '.wu-unit-temperature .wu-value'
     # weatherConditionCss = '.condition-icon'
 

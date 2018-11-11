@@ -21,12 +21,12 @@ def load(name):
     return data  # if doesnt exists return empty list
 
 
-def save(name, journal_data):
+def save(name, data):
     filename = get_fullpathname(name)
     print(".....saving to {}".format(filename))
 
     with open(filename, 'w') as fout:
-        for entry in journal_data:
+        for entry in data:
             fout.write(entry + '\n')
 
 
@@ -35,5 +35,5 @@ def get_fullpathname(name):
     return filename
 
 
-def add_entry(text, journal_data):
-    journal_data.append(text)
+def add_entry(text, data):
+    data.append(text)

@@ -19,7 +19,7 @@ def run_event_loop():
 
 
     cmd = 'EMPTY'
-    while cmd != 'x' and cmd: # not equals to x and is True (non empty)
+    while cmd != 'x': # not equals to x and is True (non empty)
 
         cmd = input('[L]ist entries, [A]dd an entry, E[x]it:  ')
         cmd = cmd.lower().strip()
@@ -28,8 +28,10 @@ def run_event_loop():
             list_entries(journal_data)
         elif cmd == 'a':
             add_entries(journal_data)
-        elif cmd != 'x' and cmd:
+        elif cmd != 'x' and not cmd:
             print('Try again!')
+
+
 
     journal.save(journal_name,journal_data)
     print('Done. End of Journal.')
