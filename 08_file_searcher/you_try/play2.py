@@ -1,8 +1,10 @@
 def main():
-
-    for n in print_primes(10000):
-        print(n, end = ', ')
+    count = 0
+    for n in print_primes(1000000):
+        count += 1
+#        print(n, end = ', ')
 #    print(prime(21))
+    print(count)
 
 def prime(n):
     for i in range(2,n):

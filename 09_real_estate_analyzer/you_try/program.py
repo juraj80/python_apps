@@ -24,7 +24,6 @@ def get_data_file():
     return os.path.join(base_folder,'SacramentoRealEstateTransactions2008.csv')
 
 def load_file(filename):
-#    with open(filename, 'r', encoding='utf-8') as fin:
     with open(filename, 'r') as fin:
         reader = csv.DictReader(fin) #creates Ordered Dict
         purchases = []
@@ -70,8 +69,8 @@ def load_file(filename):
 #             lines.append(line_data)
 #         print(lines[:5])
 
-def get_price(p):
-    return p.price
+# def get_price(p):
+#     return p.price
 
 
 def query_data(data):
