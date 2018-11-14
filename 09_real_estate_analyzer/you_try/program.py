@@ -73,7 +73,7 @@ def load_file(filename):
 #     return p.price
 
 
-def query_data(data):
+def query_data(data):  # data - list of purchase objects
     #most expensive house?
     data.sort(key = lambda p: p.price)
 #    data.sort(key=get_price)
@@ -89,7 +89,7 @@ def query_data(data):
     # prices = []
     # for pur in data:
     #     prices.append(pur.price)
-    prices = [ p.price for p in data ] #list comprehension
+    prices = [ p.price for p in data ] #list comprehension / to extract prices from dict to list
 
 
     avg_price = statistics.mean(prices)

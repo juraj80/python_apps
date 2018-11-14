@@ -8,7 +8,7 @@ MovieResult = collections.namedtuple(
 def find_movies(search_text):
 
     if not search_text or not search_text.strip():
-        raise ValueError
+        raise ValueError   # returns ValueError in program.py in try block, to catch that exception we need to create except ValueError in search_event_loop
 
     url = 'http://movie_service.talkpython.fm/api/search/{}'.format(search_text)
 
@@ -35,10 +35,10 @@ def find_movies(search_text):
 #     movies.append(m)
 
 
-# def method(x,y,z, **kwargs):
+# def method(x,y,z, **kwargs): # **kwargs takes additional keyword arguments and turns them to dictionary
 #     return kwargs
 #
-# print(method(7,1,z=2, format=True, age=7))
+# print(method(7,1,z=2, format=True, age=7)) # these ** can be used in reversed direction to go from dict to keyword arguments
 
 # movies =[]
 # for md in movies_list: # to create list of namedTuples
