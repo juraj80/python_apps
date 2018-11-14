@@ -1,7 +1,7 @@
 class Purchase:
-    def __init__(self,street, city, zipcode, state, beds,
-            baths, sq__ft, home_type, sale_date, price,
-            latitude, longitude):
+    def __init__(self, street, city, zipcode, state, beds,
+                 baths, sq__ft, home_type, sale_date, price,
+                 latitude, longitude):
         self.longitude = longitude
         self.latitude = latitude
         self.price = price
