@@ -8,7 +8,9 @@ MovieResult = collections.namedtuple(
 def find_movies(search_text):
 
     if not search_text or not search_text.strip():
-        raise ValueError   # returns ValueError in program.py in try block, to catch that exception we need to create except ValueError in search_event_loop
+        raise ValueError   # returns ValueError in program.py in try block
+                           # we are creating exception here to raise ValueError if search_text is False
+                           # to catch that exception we need to create except ValueError in search_event_loop
 
     url = 'http://movie_service.talkpython.fm/api/search/{}'.format(search_text)
 

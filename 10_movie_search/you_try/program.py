@@ -22,7 +22,7 @@ def search_event_loop():
             print("Error: Search text is required.")
         except requests.exceptions.ConnectionError:
             print("Error: Your network is down.")
-        except Exception as x:
+        except Exception as x: # general exception
             print("Unexpected error. Details: {}".format(x))
 
     print('exiting...')
